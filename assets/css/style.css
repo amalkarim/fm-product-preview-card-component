@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+html {
+  font-size: 14px;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f3eae3;
+  color: hsl(228, 12%, 48%);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.card {
+  display: grid;
+  max-width: 620px;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-img {
+  overflow: hidden;
+}
+.card-img img {
+  transition: transform 0.7s;
+  width: 100%;
+  max-width: 100%;
+}
+.card-img img:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+.card-content {
+  padding: 30px 40px;
+}
+.cat {
+  margin-bottom: 25px;
+  letter-spacing: 5px;
+}
+.title {
+  font-family: 'Fraunces', sans-serif;
+  color: hsl(212, 21%, 14%);
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+.desc {
+  margin-bottom: 25px;
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.real-price {
+  display: inline-block;
+  font-family: 'Fraunces', sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  color: hsl(158, 36%, 37%);
+}
+.disc {
+  text-decoration: line-through;
+}
+.cta {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+.cta:hover {
+  background-color: rgb(42 90 72);
+}
+footer {
+  padding: 20px;
+}
+.attribution {
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.attribution a:hover {
+  color: rgb(42 90 72);
+}
+@media screen and (max-width: 755.5px) {
+  .card {
+    grid-template-columns: 1fr;
+    max-width: 370px;
+  }
+  .card-img {
+    height: 300px;
+  }
+  .card-img img {
+    object-fit: cover;
+    object-position: 0 -75px;
+  }
+}
